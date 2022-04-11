@@ -12,12 +12,12 @@ function SimpleCounter(props) {
 			<div className="clock">
 				<i className="far fa-clock"></i>
 			</div>
-			<div className="six">{props.digitSix % 10}</div>
-			<div className="five">{props.digitFive % 10}</div>
-			<div className="dour">{props.digitFour % 10}</div>
-			<div className="three">{props.digitThree % 10}</div>
-			<div className="two">{props.digitTwo % 10}</div>
-			<div className="one">{props.digitOne % 10}</div>
+			<div className="six">{props.digitSix}</div>
+			<div className="five">{props.digitFive}</div>
+			<div className="dour">{props.digitFour}</div>
+			<div className="three">{props.digitThree}</div>
+			<div className="two">{props.digitTwo}</div>
+			<div className="one">{props.digitOne}</div>
 		</div>
 	);
 }
@@ -33,12 +33,12 @@ SimpleCounter.prototypes = {
 
 let counter = 1;
 setInterval(function () {
-	const six = Math.floor(counter / 100000);
-	const five = Math.floor(counter / 10000);
-	const four = Math.floor(counter / 1000);
-	const three = Math.floor(counter / 100);
-	const two = Math.floor(counter / 10);
-	const one = Math.floor(counter / 1);
+	const six = Math.floor(counter / 100000) % 10;
+	const five = Math.floor(counter / 10000) % 10;
+	const four = Math.floor(counter / 1000) % 10;
+	const three = Math.floor(counter / 100) % 10;
+	const two = Math.floor(counter / 10) % 10;
+	const one = Math.floor(counter / 1) % 10;
 	console.log(six, five, four, three, two, one);
 	counter++;
 	//render your react application
