@@ -12,23 +12,23 @@ function SimpleCounter(props) {
 			<div className="clock">
 				<i className="far fa-clock"></i>
 			</div>
-			<div className="six">{props.digitSix}</div>
-			<div className="five">{props.digitFive}</div>
-			<div className="dour">{props.digitFour}</div>
-			<div className="three">{props.digitThree}</div>
-			<div className="two">{props.digitTwo}</div>
-			<div className="one">{props.digitOne}</div>
+			<div className="six">{props.posSix}</div>
+			<div className="five">{props.posFive}</div>
+			<div className="dour">{props.posFour}</div>
+			<div className="three">{props.posThree}</div>
+			<div className="two">{props.posTwo}</div>
+			<div className="one">{props.posOne}</div>
 		</div>
 	);
 }
 
 SimpleCounter.prototypes = {
-	digitSix: Proptypes.number,
-	digitFive: Proptypes.number,
-	digitFour: Proptypes.number,
-	digitThree: Proptypes.number,
-	digitTwo: Proptypes.number,
-	digitOne: Proptypes.number,
+	posSix: Proptypes.number,
+	posFive: Proptypes.number,
+	posFour: Proptypes.number,
+	posThree: Proptypes.number,
+	posTwo: Proptypes.number,
+	posOne: Proptypes.number,
 };
 
 let counter = 1;
@@ -44,12 +44,12 @@ setInterval(function () {
 	//render your react application
 	ReactDOM.render(
 		<SimpleCounter
-			digitSix={six}
-			digitFive={five}
-			digitFour={four}
-			digitThree={three}
-			digitTwo={two}
-			digitOne={one}
+			posSix={six}
+			posFive={five}
+			posFour={four}
+			posThree={three}
+			posTwo={two}
+			posOne={one}
 		/>,
 		document.querySelector("#app")
 	);
